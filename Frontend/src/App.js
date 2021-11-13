@@ -6,12 +6,13 @@ import Restaurant from './components/Restaurant';
 import Restaurants from './components/Restaurants';
 import SearchBar from './components/SearchBar';
 import Topbar from './components/Topbar';
+import Home from './pages/Home/Home';
 import RestaurantOrder from './pages/Resord/RestaurantOrder';
 
 function App() {
   return (
     <div className="App">
-      <RestaurantOrder/>
+      <Home/>
     </div>
   );
 }

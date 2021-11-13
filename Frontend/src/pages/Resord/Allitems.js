@@ -73,6 +73,7 @@ border-radius: 10px;
 flex-direction: column;
 align-items: center;
 border:solid 1px black;
+position:sticky;
 button{
     width:120px;
     font-size:22px;
