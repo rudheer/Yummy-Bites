@@ -6,7 +6,7 @@ import Restaurant from './components/Restaurant';
 import Restaurants from './components/Restaurants';
 import SearchBar from './components/SearchBar';
 import Topbar from './components/Topbar';
-import RestaurantOrder from './pages/RestaurantOrder';
+import RestaurantOrder from './pages/Resord/RestaurantOrder';
 
 function App() {
   return (
