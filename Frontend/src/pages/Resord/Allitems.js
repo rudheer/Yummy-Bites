@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Item from './Item'
 import Items from './Items'
 
-const Allitems = () => {
+const Allitems = ({restaurant}) => {
     return (
         <Wrap>
             <Fooditems>
@@ -15,7 +15,7 @@ const Allitems = () => {
                         <input type="text" placeholder="Search for Recipie's here" />
                     </form> 
                 </Searchfood>
-                <Items/>
+                <Items resitems={restaurant.dishes}/>
             </Fooditems>
             <Cart>
                 <Heading>

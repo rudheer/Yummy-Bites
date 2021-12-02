@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-const Item = () => {
+const Item = ({dish}) => {
     return (
         <Wrap>
             <Image>
@@ -8,13 +8,13 @@ const Item = () => {
             </Image>
             <Info>
                 <Title>
-                <p>Paneer Butter Masala</p>
+                <p>{dish.name}</p>
                 </Title>
                 <Description>
-                    <p>With a sweet touch of the butter, koya and soft paneer</p>
+                    <p>{dish.dishdec}</p>
                 </Description>
                 <Cost>
-                    <li>275/-</li>
+                    <li>{dish.price}/-</li>
                 </Cost>
                 <button>Add to Cart</button>
             </Info>

@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Restaurant from './Restaurant'
 
-const Restaurants = () => {
+const Restaurants = ({restaurants}) => {
     return (
         <ALLrestaurants>
-            <Restaurant/>
-            <Restaurant/>
-            <Restaurant/>
-            <Restaurant/>
-            <Restaurant/>
+            {restaurants.map(p=>(
+                <Restaurant restaurant={p} />
+            ))}
         </ALLrestaurants>
     )
 }

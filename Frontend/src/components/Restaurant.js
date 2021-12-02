@@ -1,18 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
-const Restaurant = () => {
+const Restaurant = ({restaurant}) => {
     return (
         <Wrap>
             <Image>
-                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hakiiz1hbrowuqdecmgd" alt="fooditem"/>
+                {restaurant.photo &&(
+                    <img src={restaurant.photo} alt="fooditem"/>
+                )}
             </Image>
             <Info>
+                <Link to={`/restaurant/${restaurant._id}`}  style={{textDecoration:"none",color:"inherit"}}>
                 <Title>
-                <p>The Taj Hotel</p>
+                <p>{restaurant.name}</p>
                 </Title>
+                </Link>
                 <Description>
-                    <p>Chinese, Italian</p>
+                    <p>{restaurant.resdec}</p>
                 </Description>
             </Info>
         </Wrap>

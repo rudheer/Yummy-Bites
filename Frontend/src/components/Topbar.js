@@ -1,15 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Topbar = () => {
+    const user=true;
     return (
         <Wrap>
             <LeftItems>
                 <li>Add Restaurant</li>
             </LeftItems>
             <RightItems>
-                <li>Log In</li>
-                <li>Sign In</li>
+                <li>
+                    <Link to="/login"  style={{textDecoration:"none",color:"inherit"}}>Log In</Link>
+                </li>
+                <li>
+                <Link to="/register"  style={{textDecoration:"none",color:"inherit"}}>Sign Up</Link>
+                </li>
             </RightItems>
         </Wrap>
     )

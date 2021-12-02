@@ -1,18 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Item from './Item'
-const Items = () => {
+const Items = ({resitems}) => {
     return (
         <Container>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
+            {resitems.map(r=>(
+                <Item dish={r}/>
+            ))}
+            
         </Container>
     )
 }

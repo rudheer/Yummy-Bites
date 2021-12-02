@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from'styled-components'
 
-const ResHotel = () => {
+const ResHotel = ({restaurant}) => {
     return (
         <Hotelinfo>
             <ResDetails>
                 <ul>
-                    <li style={{fontSize:"48px",color:"black", fontWeight:"bold"}}>The Taj Hotel</li>
-                    <li>Chinese, Italian, North Indian</li>
-                    <li>Dalal street, Mumbai</li>
-                    <li>11AM - 10PM</li>
+                    <li style={{fontSize:"48px",color:"black", fontWeight:"bold"}}>{restaurant.name}</li>
+                    <li>{restaurant.resdec}</li>
+                    <li>{restaurant.address}</li>
                 </ul>
             </ResDetails>
             <Resimage>
-                <img src="https://www.nkrealtors.com/blog/wp-content/uploads/2018/03/hyderabadi-cuisine.jpg" alt="restaurant"/>
+                {restaurant.photo &&(
+                    <img src={restaurant.photo} alt="restaurantpic"/>
+                )}
             </Resimage>
         </Hotelinfo>
     )
